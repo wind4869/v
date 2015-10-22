@@ -232,6 +232,14 @@ int StrToInt(const char *str)
 	return (int)num;
 }
 
+void reshuffle(char *str)
+{
+	for (int i = strlen(str) - 1; i > 0; --i) {
+		int j = rand() % (i + 1);
+		swap(str[i], str[j]);
+	}
+}
+
 int main()
 {
 	// char str[20] = "We are happy.";
